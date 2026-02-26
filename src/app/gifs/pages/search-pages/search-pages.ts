@@ -1,9 +1,9 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'app-trending',
+  selector: 'app-search',
   imports: [],
-  templateUrl: './trending.html',
+  templateUrl: './search-pages.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export default class Trending { }
+export default class Search { }

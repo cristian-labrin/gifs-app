@@ -7,11 +7,11 @@ export const routes: Routes = [
     children: [
       {
         path: 'trending',
-        loadComponent: () => import('./gifs/pages/trending/trending')
+        loadComponent: () => import('./gifs/pages/trending-pages/trending-pages')
       },
       {
         path: 'search',
-        loadComponent: () => import('./gifs/pages/search/search')
+        loadComponent: () => import('./gifs/pages/search-pages/search-pages')
       },
       {
         path: '**',
