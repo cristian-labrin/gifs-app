@@ -1,5 +1,7 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive } from "@angular/router";
+import { Gif } from 'src/app/gifs/interfaces/gif';
+import { GifService } from 'src/app/gifs/services/gifs';
 
 interface MenuOption {
   icon: string;
@@ -14,6 +16,14 @@ interface MenuOption {
   templateUrl: './gifs-side-menu-options.html',
 })
 export class GifsSideMenuOptions {
+  gifService = inject(GifService);
+
+  //gifs = signal<string[]>(this.gifService.searchHistoryKeys());
+
+  // ngOnInit() {
+  //   console.log(this.gifService.searchHistoryKeys());
+  // }
+
   menuOptions:MenuOption[] = [
     {
       icon: 'fa-solid fa-chart-line',
